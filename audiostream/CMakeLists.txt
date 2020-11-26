@@ -342,13 +342,15 @@ if(NOT DISABLE_INSTALL_HEADERS)
   )
 endif()
 
-install(
-  TARGETS audiostream
-  EXPORT ni-mediaExport
-  RUNTIME DESTINATION bin
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib
-)
+if(NOT DISABLE_INSTALL_LIBS)
+  install(
+    TARGETS audiostream
+    EXPORT ni-mediaExport
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+  )
+endif()
 
 #-----------------------------------------------------------------------------------------------------------------------
 # testing
@@ -356,7 +358,6 @@ install(
 
 include(CMakeDependentOption)
 cmake_dependent_option(NIMEDIA_AUDIOSTREAM_TESTS "Enable audiostream tests" ON "NIMEDIA_TESTS" OFF)
-cmake_dependent_option(NIMEDIA_AUDIOSTREAM_TESTS_WITH_USER_FILES "Enable audiostream tests with user files" ON "NIMEDIA_AUDIOSTREAM_TESTS" OFF)
 
 if(NIMEDIA_AUDIOSTREAM_TESTS)
   add_subdirectory(test)
