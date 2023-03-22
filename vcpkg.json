@@ -1,6 +1,6 @@
 {
   "name": "ni-media",
-  "version-string": "0.1.0",
+  "version-string": "1.0.0",
   "dependencies": [
     "libogg",
     "libflac",
@@ -13,6 +13,7 @@
     "boost-icl",
     "boost-iostreams",
     "boost-locale",
+    "boost-math",
     "boost-program-options",
     "boost-system",
     "gtest"
