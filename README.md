@@ -78,11 +78,6 @@ cmake --build .
 cmake -G YOUR-PROJECT-GENERATOR -DCMAKE_PREFIX_PATH=path/to/dependencies/ -DNIMEDIA_TESTS=ON path/to/ni-media
 ```
 
-Before running the tests some reference test files need to be downloaded using [git-lfs](https://github.com/git-lfs/git-lfs):
-```
-git lfs pull -X ""
-```
-
 To execute the tests run:
 ```
 cmake --build . --target test
@@ -95,7 +90,7 @@ We very much appreciate your contribution! If you want to contribute please get 
 * [Marc Boucek](https://github.com/marcrambo) 
 * [Nathan Kozlowski](https://github.com/FalconPDX)
 * [Moritz Heppner](https://github.com/ni-mheppner)
-* [Anyere Bendrien](https://github.com/ni-abendrien)
+* [Tim Smit](https://github.com/ni-tsmit)
 
 Please run [clang-format](https://clang.llvm.org/docs/ClangFormat.html) with the provided .clang-format file and if possible add some tests when opening a pull request.
 
